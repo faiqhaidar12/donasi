@@ -14,11 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 Route::get('/', [DonationController::class, 'index']);
-Route::get('/donation', [DonationController::class, 'index']);
-Route::post('/donation', [DonationController::class, 'store']);
+Route::get('/donation', [DonationController::class, 'create']);
